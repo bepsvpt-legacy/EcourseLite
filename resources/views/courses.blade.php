@@ -37,7 +37,7 @@
                     <div class="col s12">
                         <ul class="tabs">
                             <li class="tab col s6"><a class="active" href="#grade-{{ $str_random }}">成績查詢</a></li>
-                            <li class="tab col s6"><a href="#others-{{ $str_random }}">檔案下載</a></li>
+                            <li class="tab col s6"><a href="#others-{{ $str_random }}">授課教材</a></li>
                         </ul>
                     </div>
                     <div id="grade-{{ $str_random }}" class="col s10 offset-s1" data-course-grades style="max-height: 500px; overflow: auto; margin-top: 1em; background-color: #fff;"></div>

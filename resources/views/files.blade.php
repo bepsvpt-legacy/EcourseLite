@@ -1,4 +1,10 @@
 <table class="bordered striped centered responsive-table">
+    <thead>
+        <tr>
+            <th>檔案名稱</th>
+            <th>檔案名稱</th>
+        </tr>
+    </thead>
     <tbody>
         @for ($i = 0, $count = count($files); $i < $count; $i += 2)
             <tr>
