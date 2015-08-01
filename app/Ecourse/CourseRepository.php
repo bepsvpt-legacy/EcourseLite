@@ -140,7 +140,7 @@ class CourseRepository extends Core
             {
                 $content = getRequest(Core::COURSE_TEXTBOOK . $link->href, false);
 
-                $files = array_merge($files, (new Htmldom())->load($content)->find('a'));
+                $files = array_merge($files, (new Htmldom())->load($content)->find('a[href*=textbook]'));
             }
 
             return $files;
