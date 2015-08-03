@@ -1,7 +1,13 @@
 @extends('layouts.master')
 
 @section('main')
-    <div style="min-height: 100%; height: 100%;" data-course-lists>
+    <div class="hide" data-navbar>
+        <a href="{{ route('signOut') }}" class="signOut waves-effect waves-light btn"><i class="material-icons" title="登出">input</i></a>
+
+        <h3 style="color: #B3B3B3;">Ecourse Lite</h3>
+    </div>
+
+    <div class="full-height" data-course-lists>
         <div class="row" style="position: relative; top: 50%; transform: translateY(-50%)">
             <div class="col s2 offset-s5">
                 <div class="preloader-wrapper big active">
@@ -19,10 +25,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div style="position: fixed; top: 1em; right: 1em;">
-        <a href="{{ route('signOut') }}" class="waves-effect waves-light btn"><i class="material-icons" title="登出">input</i></a>
     </div>
 
     <div id="course-news-modal" class="modal">
@@ -67,7 +69,10 @@
                     insertHtmlContent($('div[data-course-news]'), courseID, '/course-news/' + $(this).data('course-id'), function() {$('div[data-loading]').hide();});
                 });
 
-                insertHtmlContent($('div[data-course-lists]'), 'course-lists', '/course-lists');
+                insertHtmlContent($('div[data-course-lists]'), 'course-lists', '/course-lists', function()
+                {
+                    $('div[data-navbar]').removeClass('hide');
+                });
             });
         })(jQuery);
     </script>
