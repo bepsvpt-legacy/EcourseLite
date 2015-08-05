@@ -1,28 +1,16 @@
 @extends('layouts.master')
 
 @section('main')
-    <div class="hide" data-navbar>
-        <a href="{{ route('signOut') }}" class="signOut waves-effect waves-light btn"><i class="material-icons" title="登出">input</i></a>
+    <div class="hide course-navbar" data-navbar>
+        <img src="{{ asset('logo.svg') }}">
 
-        <h3 style="color: #B3B3B3;">Ecourse Lite</h3>
+        <a href="{{ route('signOut') }}" class="waves-effect waves-light btn"><i class="material-icons" title="登出">input</i></a>
     </div>
 
     <div class="full-height" data-course-lists>
-        <div class="row" style="position: relative; top: 50%; transform: translateY(-50%)">
+        <div class="row vertical-middle">
             <div class="col s2 offset-s5">
-                <div class="preloader-wrapper big active">
-                    <div class="spinner-layer spinner-blue-only">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-                </div>
+                @include('layouts.loading')
             </div>
         </div>
     </div>
@@ -35,19 +23,7 @@
 
             <div class="row" data-loading style="margin-top: 3em;">
                 <div class="col s4 offset-s4 m4 offset-m5">
-                    <div class="preloader-wrapper big active">
-                        <div class="spinner-layer spinner-blue-only">
-                            <div class="circle-clipper left">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="gap-patch">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="circle-clipper right">
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-                    </div>
+                    @include('layouts.loading')
                 </div>
             </div>
         </div>
@@ -71,6 +47,7 @@
 
                 insertHtmlContent($('div[data-course-lists]'), 'course-lists', '/course-lists', function()
                 {
+                    $('div[data-course-lists]').removeClass('full-height');
                     $('div[data-navbar]').removeClass('hide');
                 });
             });

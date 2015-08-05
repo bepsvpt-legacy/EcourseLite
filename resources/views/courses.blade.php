@@ -9,26 +9,14 @@
                         <p class="title">{{ $list->children(3)->plaintext }}</p>
                         <small>{{ $list->children(4)->plaintext }}</small><br>
                         <small>{{ $list->children(1)->plaintext }}</small>
-                        <a href="#course-news-modal" class="secondary-content waves-effect waves-light btn modal-trigger" data-course-id="{{ $courseId }}">{{ $list->children(5)->plaintext }} news</a>
+                        <a href="#course-news-modal" class="secondary-content waves-effect waves-light btn modal-trigger news-button" data-course-id="{{ $courseId }}">{{ $list->children(5)->plaintext }} news</a>
                     </li>
                 </ul>
             </div>
             <div class="collapsible-body" style="background-color: #e3f2fd;">
                 <div class="row" data-loading style="padding-top: 20px;">
-                    <div class="col s4 offset-s4 m4 offset-m5">
-                        <div class="preloader-wrapper big active">
-                            <div class="spinner-layer spinner-blue-only">
-                                <div class="circle-clipper left">
-                                    <div class="circle"></div>
-                                </div>
-                                <div class="gap-patch">
-                                    <div class="circle"></div>
-                                </div>
-                                <div class="circle-clipper right">
-                                    <div class="circle"></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col s4 offset-s5">
+                        @include('layouts.loading')
                     </div>
                 </div>
 
