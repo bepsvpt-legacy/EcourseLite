@@ -58,7 +58,7 @@
 
             <div>
                 <ol>
-                    <li>本網站不會收集任何使用者的資料，在使用者登出或閒置過久後，資料將從伺服器中移除</li>
+                    <li>本網站不會收集任何使用者的個人資料，在使用者登出或閒置過久後，資料將從伺服器中移除</li>
                     <li>本網站僅將使用者提供的帳號與密碼用於連線 <a href="http://ecourse.ccu.edu.tw" target="_blank">Ecourse</a> 系統，不會用於其他用途</li>
                     <li>所有於本網站操作的行為，將由使用者自行承擔其後果，本網站不負任何責任</li>
                     <li>本網站所提供服務的相關網站原始碼可由 <a href="https://github.com/BePsvPT/EcourseLite" target="_blank">此處</a> 查閱</li>
@@ -73,7 +73,7 @@
     <script>
         sessionStorage.clear();
 
-        document.getElementsByTagName('body')[0].style.backgroundColor = '#118EFF';
+        document.getElementsByTagName('body')[0].style.backgroundColor = '#0D88EE';
 
         var links = document.getElementsByTagName('footer')[0].getElementsByTagName('a');
 
