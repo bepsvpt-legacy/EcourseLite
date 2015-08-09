@@ -4,7 +4,7 @@
     <div class="hide course-navbar" data-navbar>
         <img src="{{ asset('logo.svg') }}">
 
-        <a href="{{ route('signOut') }}" class="waves-effect waves-light btn"><i class="material-icons" title="登出">input</i></a>
+        <a href="{{ route('signOut') }}" class="waves-effect waves-light btn" title="登出"><i class="material-icons">input</i></a>
     </div>
 
     <div class="full-height" data-course-lists>
