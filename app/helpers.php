@@ -13,7 +13,7 @@ if ( ! function_exists('getRequest'))
     {
         $request = new \GuzzleHttp\Client();
 
-        $response = $request->get($url, ['cookies' => session('COOKIE')]);
+        $response = $request->get($url, ['cookies' => session('COOKIE'), 'verify' => storage_path('app/cert.pem')]);
 
         if ( ! $convertEncoding)
         {

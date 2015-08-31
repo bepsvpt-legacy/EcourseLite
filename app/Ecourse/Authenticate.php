@@ -5,6 +5,7 @@ namespace App\Ecourse;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\SetCookie;
+use GuzzleHttp\RequestOptions;
 
 class Authenticate extends Core
 {
@@ -67,7 +68,8 @@ class Authenticate extends Core
                 'pass' => $this->password,
                 'ver' => 'C'
             ],
-            'allow_redirects' => false
+            'allow_redirects' => false,
+            'verify' => storage_path('app/cert.pem')
         ]);
 
         if ((302 !== $response->getStatusCode()) || ( ! count($location = $response->getHeader('location'))))
