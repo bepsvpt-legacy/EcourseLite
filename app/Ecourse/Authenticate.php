@@ -5,7 +5,6 @@ namespace App\Ecourse;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\SetCookie;
-use GuzzleHttp\RequestOptions;
 
 class Authenticate extends Core
 {
