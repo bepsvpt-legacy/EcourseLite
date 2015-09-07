@@ -9,7 +9,7 @@
                         <p class="title">{{ $list->children(3)->plaintext }}</p>
                         <small>{{ $list->children(4)->plaintext }}</small><br>
                         <small>{{ $list->children(1)->plaintext }}</small>
-                        <a href="#course-news-modal" class="secondary-content waves-effect waves-light btn modal-trigger news-button" data-course-id="{{ $courseId }}">{{ $list->children(5)->plaintext }} news</a>
+                        <a href="#course-news-modal" class="secondary-content waves-effect waves-light btn modal-trigger news-button" data-course-id="{{ $courseId }}" {!! (intval($list->children(5)->plaintext) === 0) ? 'style="background-color: #C0C0C0;"' : '' !!}>{{ $list->children(5)->plaintext }} news</a>
                     </li>
                 </ul>
             </div>
